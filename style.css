@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to top right ,#25465f, #4f4376);
+    color: #535456;
+}
+
+.container {
+    background-color: #f6f6f8;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.container h1 {
+    color: #25465f;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.container h1::after {
+    content: '';
+    height: 2px;
+    width: 50%;
+    background-image: linear-gradient(to top right, #25465f, #4f4376);;
+    position: absolute;
+    bottom: -10px;
+    left: 25%;
+}
+
+#password-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+#password-container input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 100%;
+
+}
+
+#password-container i {
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.password-choices {
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.password-choices #password-length {
+    color: #25465f;
+    font-weight: 700;
+    font-size: 0.8rem;
+    background-color: #e3f1fd;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.password-choices div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.password-choices div input {
+    accent-color: #2c5775;
+}
+
+.password-choices div input[type='range'] {
+    height: 4px;
+}
+
+.password-choices div input[type='range']:focus {
+    outline: none;
+}
+
+.password-choices div input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+}
+
+.container #generate-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-image: linear-gradient(to top right, #25465f, #4f4376);
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.strength-indicator {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.strength-indicator span {
+    color: #2c5775;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #e2e5ea;
+    overflow: hidden;
+}
+
+.progress-bar #progress {
+    background-color: #6bd491;
+    height: 100%;
+}
+
